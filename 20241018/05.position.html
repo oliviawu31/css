@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* 
+            調整資料走向 direction: rtl;
+            (right to left)   
+            */
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        #relative {
+            /* 
+            (1)top、left、right、bottom 距離原本的位置偏移 
+            (2)left、right 同時設定時會依照資料走向為主(*資料走向預設是左到右)
+            (3)top、bottom 同時設定時以top 為主
+            */
+
+            left: 20px;
+            /* relative 相對於原本位置偏移 */
+            /* 一定要設定position才可以調整，因為預設值為stic */
+            position: relative;
+        }
+
+        #absolute-out {
+            /* 因為設了position = 距離上方50px */
+            width: 300px;
+            height: 300px;
+            background: brown;
+            position: relative;
+        }
+
+        #absolute-in {
+            /* 
+                (1)absolute 相對於上層 relative 位置偏移，都沒有就是body
+                (2)目前顯示的是距離body 50px
+            
+            */
+            position: absolute;
+            /* 如果元素沒有寬高時，可以利用top、bottom、right、left 拉伸元素 */
+            /* 有寬高時，偏移方式和 relative 相同 */
+            top: 50px;
+            bottom: 50px;
+            left: 50px;
+            right: 50px;
+            /* width: 100px;
+            height: 100px; */
+            background: pink;
+        }
+
+        #fixed {
+            /*  (1)固定在瀏覽器視窗的位置
+                (2)可以用於回到上一頁或回首頁的小按鈕
+            */
+            position: fixed;
+            left: 10px;
+            bottom: 10px;
+            background: rgb(255, 231, 122);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="relative" class="box">relative</div>
+    <div id="absolute-out" class="box">absolute-out
+        <!-- 拿掉寬高時 -->
+        <div id="absolute-in">absolute-in</div>
+    </div>
+    <div id="fixed" class="box">fixed</div>
+</body>
+
+</html>

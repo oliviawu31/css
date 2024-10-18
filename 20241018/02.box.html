@@ -37,17 +37,53 @@
                 左邊設 auto 可以靠右
                 右邊設 auto 可以靠左 */
 
-            margin: 10px 20px 10px auto;
+            margin: 10px 0 10px auto;
+
+            /* border-width: ;border-style: ;border-color: ; */
+            /* 實線:solid、需線:dashed */
+            /* 同時設定四個邊-實線邊框 */
+            border: 2px solid rgb(121, 87, 37);
+            /* 單獨設定一邊
+                border-top: 1px solid black; */
+            /* 分開設定
+            border-width: 1px;
+            border-top-style: solid;
+            border-top-color:black ; */
+
+
+            /* 外框、不佔大小，位置在 border 以外 */
+            outline: 5px solid rgb(233, 98, 98);
+            /* 外框和 bordre 的間距 */
+            outline-offset: 10px;
+            /* 陰影在外框，區塊的陰影 box-shadow */
+            box-shadow: 0px 0px 10px black;
+
+            /* 
+                box-sizing = 控制寬高設定的範圍 
+                content-box(預設) = 只包含內容區
+                border-box(很常用) =包含內容、padding、邊框
+            */
+
+            box-sizing: border-box;
+
         }
 
         #div2 {
             width: 300px;
             height: 300px;
             background: skyblue;
+            /* 
+                overflow = 東西超出內容區的處理方式
+                auto = 自動
+                visible = 看得到
+                hidden = 隱藏 
+
+                overflow-x、overflow-y = 分別設定
+            */
+            overflow: auto;
+            /* text-align: justify = 字體左右撐開讓文字置中 */
+            text-align: justify;
         }
-
-
-        /*  */
     </style>
 </head>
 <!-- margin = 外框(兩個東西的間距)
@@ -59,7 +95,14 @@
 <body>
     <!-- ctlorem = 中文假字 -->
     <div id="div1">紛紛眾人體內在他文學工業形成感染完善課。</div>
-    <div id="div2">主角打了言論老闆郵箱特殊不到，在於階段。</div>
+    <br>
+    <div id="div2">
+        北方太陽我說成績兩次措施有利於一旦警方不論不如電視，男子結束高手母親精神思維不肯魔獸尚未，恢復理由請點擊第一不怕，婦女有意書庫一年很久，配置玩家通過引進好友，森林國產山西滑鼠反而用戶特點年齡民眾，十年開放你的傳真，塑膠得分臺灣人，廠商熱點詳細內容您現在屏。
+        北方太陽我說成績兩次措施有利於一旦警方不論不如電視，男子結束高手母親精神思維不肯魔獸尚未，恢復理由請點擊第一不怕，婦女有意書庫一年很久，配置玩家通過引進好友，森林國產山西滑鼠反而用戶特點年齡民眾，十年開放你的傳真，塑膠得分臺灣人，廠商熱點詳細內容您現在屏。
+        北方太陽我說成績兩次措施有利於一旦警方不論不如電視，男子結束高手母親精神思維不肯魔獸尚未，恢復理由請點擊第一不怕，婦女有意書庫一年很久，配置玩家通過引進好友，森林國產山西滑鼠反而用戶特點年齡民眾，十年開放你的傳真，塑膠得分臺灣人，廠商熱點詳細內容您現在屏。
+
+    </div>
+
 
 </body>
 

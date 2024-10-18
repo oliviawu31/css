@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            /* text-align 區塊、表格內的內容對齊 */
+            text-align: center;
+            /* vertical-align 行內、表格的內容垂直對齊 
+                top         整行頂部    (表格能用)
+                middle      中間        (表格能用)
+                bottom      整行底部    (表格能用)
+                tex-top     文字字體頂部
+                tex-bottom  文字字體底部
+                super       上標
+                sub         下標
+            */
+            vertical-align: sub;
+        }
+
+        /* span 針對行內 */
+        span {
+            text-decoration: overline underline;
+        }
+
+        p {
+            line-height: 3em;
+        }
+
+        /* inline-block 一定會有間距 4px 
+            不要間距 (1)加上 margin -4px
+                     (2)不用自動排版功能，在<div></div> 與<div></div>之間不空格 
+                     (3)用不是not first child，且底下要將3個block包起來
+                     .inline-block:not(:first-child) {margin-left: -4px;}
+                    <div>
+                        <div class="inline-block">inline-block</div>
+                        <div class="inline-block">inline-block</div>
+                        <div class="inline-block">inline-block</div>
+                    </div>
+        */
+        .inline-block {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            /* 
+            display 修改元素的顯示方式
+            none: 不顯示
+            inline-block:外在排列和 inline 相同，內部排列和 block相同
+             */
+            display: inline-block;
+            text-align: center;
+        }
+
+        /* class 是 inline-block 但不是第一個 */
+        .inline-block:not(:first-child) {
+            margin-left: -4px;
+        }
+
+        /* <p> 打字  <span>單行字 <div>區塊 */
+    </style>
+</head>
+
+<body>
+    <!-- 若剛好一行字，行高設成一樣高度的時候，文字會垂直置中 -->
+    <!-- <a href="https://x.com"></a> -->
+    <p>
+        <span>AAABBB</span>
+        <img src="https://picsum.photos/id/1/16/16" alt="">
+    </p>
+    <div style="height: 30px; line-height: 30px; background-color: gray;">
+        aaa
+    </div>
+    <div>
+        <div class="inline-block">inline-block</div>
+        <div class="inline-block">inline-block</div>
+        <div class="inline-block">inline-block</div>
+    </div>
+</body>
+
+</html>
