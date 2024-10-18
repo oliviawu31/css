@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 背景圖鎖定在瀏覽器 */
+        body {
+            background-image: url("https://picsum.photos/300/200/?random=10");
+            background-attachment: fixed;
+
+            .attachment {
+                width: 600px;
+                height: 600px;
+                margin: 50px auto;
+                border: 5px solid #333
+                    /* background-image: url("https://picsum.photos/300/200/?random=10");
+            background-attachment: fixed;
+             */
+
+
+            }
+
+
+        }
+
+        .box {
+            /* 盒模型 */
+            width: 600px;
+            height: 600px;
+            border: 5px solid #333;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            margin: 50px auto;
+
+            /* 文字 */
+            font-size: 3rem;
+            color: rgb(255, 255, 255);
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        /* 效果  */
+        backdrop-filter:blure .bg-color {
+            background: rgb(255, 181, 181);
+            /* 縮寫 */
+            /* background-color: lightgrey; */
+        }
+
+        .bg-img {
+            /* picsum */
+            background-image: url("https://picsum.photos/300/300/?random=10");
+        }
+
+        .bg-repeat-x {
+            background-repeat: repeat-x;
+        }
+
+        .bg-repeat-y {
+            background-repeat: repeat-y;
+        }
+
+        .bg-no-repeat {
+            background-repeat: no-repeat;
+        }
+
+        .bg-position {
+            /* 雙值 =>第一個是水平，第二個是垂直 */
+            /* left、center、right <=> 0% 50% 100% */
+            /* top、center、bottom <=> 0% 50% 100% */
+            background-position: bottom right;
+            /* 也可以用px表示位置，右上為100px 100px */
+            background-position: 100px 100px;
+            /* 只寫一個值，另一個會被設定為 center */
+            background-position: left;
+        }
+
+        /* 
+        background-color v
+        background-image v
+        background-repeat v
+        background-position v
+        background-size v
+        background-attachment
+        */
+
+        /* 因為建立套件，打picsum會隨機出圖 */
+        .bg-size {
+            background-image: url("https://picsum.photos/300/200/?random=10");
+            background-image: url(./pica.png);
+            background-repeat: no-repeat;
+            /* 關鍵字:contain(在盒子裡等比例放大)、cover(填滿整個盒子等比例放大) */
+            /* background-size: contain; */
+            background-size: cover;
+            block-size: 1000px;
+            background-position: -390px -196px;
+        }
+
+        /* background: color image repeat position / size; */
+        /* background-position 與 background-size 中間一定要/  */
+        .bg-abbr {
+            background: #ffa url("./pica.png") no-repeat -390px -196px / 1000px;
+        }
+
+        /* 
+        ***很重要***
+        box-modeL，了解inline、inline-block、block 的差異
+        flexbox 的應用
+        @media query RWD */
+    </style>
+</head>
+
+<body>
+    <div class="box bg-color">background-color</div>
+    <div class="box bg-img">background-image</div>
+    <!-- .box.bg-img.bg-repeat-x 照片的重複有三種(1)x方向(2)y方向(3)不重複-->
+    <div class="box bg-img bg-repeat-x">background-repeat-x</div>
+    <div class="box bg-img bg-repeat-y">background-repeat-y</div>
+    <div class="box bg-img bg-no-repeat">background-no-repeat</div>
+    <!-- 圖片在盒子中可以在任何位置 -->
+    <div class="box bg-img bg-no-repeat bg-position">background-position</div>
+    <div class="box bg-size">background-size</div>
+    <div class="box bg-abbr"></div>
+    <!-- 自定義的名稱要有語意 -->
+
+</body>
+
+</html>

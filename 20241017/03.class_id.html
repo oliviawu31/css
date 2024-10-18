@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        class 的寫法
+        1.  .class-name
+        2. 命名不可以用數字開頭。.123abc 是不合法的，.abc123 是不合法的
+        3. 有區分大小寫，.mycolor 與 .myCoLor是不同的
+        4. 可以用中文命名，但不建議
+    */
+
+
+        .mycolor {
+            color: darkseagreen;
+
+        }
+
+        /* 畫一個相同寬、高的盒子，但三個背景顏色不同 */
+        .box {
+            width: 300px;
+            height: 300px;
+        }
+
+        .bg-color1 {
+            background-color: burlywood;
+        }
+
+        .bg-color2 {
+            background-color: cadetblue;
+        }
+
+        .bg-color3 {
+            background-color: darksalmon;
+        }
+
+        #main {
+            width: 1024px;
+            height: 768px;
+            border: 1px solid #000;
+        }
+
+        #header {
+            width: 1024px;
+            height: 100px;
+            background: lightblue;
+        }
+
+        #left {
+            width: 100px;
+            height: 568px;
+            background: lightcoral;
+            float: left;
+            /* 浮動左側 */
+        }
+
+        #right {
+            width: 924px;
+            height: 568px;
+            background: rgb(253, 224, 178);
+            float: right;
+            /* 浮動右側 */
+        }
+
+        #footer {
+            width: 1024px;
+            height: 100px;
+            background: lemonchiffon;
+            clear: both;
+            /* 清除浮動 */
+        }
+
+        /* 主流排版=>display:flxe 彈性盒flexbox */
+
+        /* 後代選擇器 */
+        nav p {
+            color: blue;
+        }
+
+        /* 子代選擇器 */
+        nav>p {
+            color: red;
+        }
+
+        ul>li {
+            color: blue;
+        }
+
+        .menu>.list-item {
+            color: brown;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- class 與id 選擇器 -->
+    <h1>CSS 選擇器</h1>
+    <p>CSS 有非常多選擇器，幫助我們在撰寫樣式時，依照該情境選擇到我們要的目標。</p>
+
+    <h1 class="mycolor">class 選擇器</h1>
+    <p class="mycolor">特性:具有重複使用的特性，是使用率最高的選擇器。</p>
+    <a class="mycolor" href="#">超連結</a>
+
+    <p>特性2:</p>
+    <p>抽離相同的的屬性寫成class 重複使用，再對不一樣的屬性定義class</p>
+    <p>class 是可以一直增加的，例如box bg-color1</p>
+    <!-- emment 打法 .box -->
+    <div class="box bg-color1"></div>
+    <br>
+    <div class="box bg-color2"></div>
+    <br>
+    <div class="box bg-color3"></div>
+
+    <h1>id 選擇器</h1>
+    <p>一份文件裡面，只允許一個獨一無二的id</p>
+    <p>對元素(標籤)設定 id，可以用程式快速取得他</p>
+
+    <div id="main">
+        <div id="header"></div>
+        <div id="left"></div>
+        <div id="right"></div>
+        <div id="footer"></div>
+    </div>
+
+    <h2>對元素(標籤)設定 id，用於程式</h2>
+    <button id="btn">按鈕</button>
+
+    <h1>後代選擇器與子帶選擇器</h1>
+    <nav>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <div>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+
+    </nav>
+
+    <hr>
+
+    <!-- ul>li*5 -->
+    <ul class="menu">
+        <li class="list-item">item</li>
+        <li class="list-item">item</li>
+        <li class="list-item">item</li>
+        <li class="list-item">item</li>
+        <li class="list-item">item</li>
+    </ul>
+
+    <ul>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+    </ul>
+
+    <!-- table>tr*3>td*4 -->
+    <!-- table>tr*3>td{iteam$}*4
+        $表示流水號數字 -->
+
+
+    <table>
+        <!-- row(列) -->
+        <tr>
+            <!-- td(欄) -->
+            <td>iteam1</td>
+            <td>iteam2</td>
+            <td>iteam3</td>
+            <td>iteam4</td>
+        </tr>
+        <!-- row -->
+        <tr>
+            <td>iteam1</td>
+            <td>iteam2</td>
+            <td>iteam3</td>
+            <td>iteam4</td>
+        </tr>
+        <!-- row -->
+        <tr>
+            <td>iteam1</td>
+            <td>iteam2</td>
+            <td>iteam3</td>
+            <td>iteam4</td>
+        </tr>
+    </table>
+
+    <script>
+        // 用程式取得 id 
+        const btn = document.getElementById('btn')
+        //讓按鈕被點擊時跳出視窗
+        btn.onclick = function () {
+            alert('Hello World')
+        }
+    </script>
+
+
+</body>
+
+</html>

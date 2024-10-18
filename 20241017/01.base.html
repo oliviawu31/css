@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 基本設定</title>
+    <!-- 第二種使用方式link，適合用於開發網站(多頁) -->
+    <link rel="stylesheet" href="./style1.css">
+
+    <!-- 第一種使用style標籤樣式，該文件的專屬樣式，自己練習時可使用(單頁) -->
+    <style>
+        /* 對h1字的顏色設定*/
+
+        /* 選擇器 { 
+            屬性: 值;
+            屬性: 值;
+            ...
+        }
+        */
+
+        /*h1是標籤選擇器*/
+
+        h1 {
+            color: brown;
+            background-color: bisque;
+        }
+
+        P {
+            font-size: 30px;
+            color: blue;
+        }
+
+        /* h1的顏色被覆蓋，由紅色變成藍色 */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: blue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 第三種方式 行內樣式(inline style)，標籤的專屬樣式，優先等級最高 -->
+    <h1 style="color: deeppink">title1</h1>
+    <!-- Lorem 假字 -->
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel voluptates soluta libero quidem ab aliquid, at,
+        voluptatem fugit eos iure aut facere repellat officia provident porro magnam nisi cumque? Deserunt.</p>
+
+
+    <h1>title2</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam assumenda magni ullam reiciendis, aut
+        possimus ducimus! Aut voluptates facere doloremque, optio aliquid hic autem amet architecto enim laborum itaque
+        vitae.</p>
+
+    <h1>title2</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam assumenda magni ullam reiciendis, aut
+        possimus ducimus! Aut voluptates facere doloremque, optio aliquid hic autem amet architecto enim laborum itaque
+        vitae.</p>
+
+    <hr>
+
+    <h1>Hello World</h1>
+    <h2>Hello World</h2>
+    <h3>Hello World</h3>
+    <h4>Hello World</h4>
+    <h5>Hello World</h5>
+    <h6>Hello World</h6>
+
+
+
+</body>
+
+</html>

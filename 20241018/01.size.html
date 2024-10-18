@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* VW會根據視窗的大小做調整 */
+        /* 100vw= 全滿 */
+        /* ID=># 、CLASS=>.*/
+        /* ID同一名稱只能用一次，CLASS可以重複用 */
+        /* vw =視窗的寬度 */
+        #vw {
+            width: 50vw;
+            height: 100px;
+            background: rgb(255, 205, 205);
+        }
+
+        /* vh =視窗的高度 */
+        /* 100vw= 全滿 */
+        #vh {
+            width: 50vh;
+            height: 100px;
+            background: rgb(173, 255, 170);
+        }
+
+        /* vmin = 視窗最短的那邊 */
+        /* 100vmin= 全滿 */
+        #vmin {
+            width: 50vmin;
+            height: 100px;
+            background: rgb(252, 255, 170);
+        }
+
+        /* vmax = 視窗最長的那邊 */
+        /* 100vmax= 全滿 */
+        #vmax {
+            width: 50vmax;
+            height: 100px;
+            background: rgb(181, 253, 255);
+        }
+
+        #out {
+            width: 300px;
+            height: 300px;
+            background: orange;
+        }
+
+        /* % =根據外層元素大小的百分比 */
+        /* 外層必須設定高度，內層的 % 才有效 */
+        /* calc() 不同單位的計算 四則運算 " + - * / " 前後都要有空白 */
+
+        #in {
+            width: calc(50% + 30px);
+            height: 50%;
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="vw">vw</div>
+    <div id="vh">vh</div>
+    <div id="vmin">vmin</div>
+    <div id="vmax">vmax</div>
+    <div id="out">
+        <div id="in"></div>
+
+</body>
+
+
+
+</html>

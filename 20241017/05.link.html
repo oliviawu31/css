@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 文字水平置中 -->
+    <style>
+        /* (1)繼承瀏覽器的高度
+            html,body{} */
+        html,
+        body {
+            height: 100%;
+        }
+
+        /* (2)瀏覽器高度 body{ height 100vh} */
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 偽類 pseudo-class，是一個大家族 */
+        /* 也可以直接打a 做超連結就好 */
+        /* :link 是一個狀態，有連結href 的狀態 */
+        a:link {
+            color: brown;
+            font-size: 100px;
+            /*拿掉底線*/
+            text-decoration: none;
+            /* 轉場動畫 淡出 */
+            transition: 1s;
+        }
+
+        /* :visited 拜訪過後的狀態 */
+        a:visited {
+            color: chocolate;
+        }
+
+        /* :hover 滑鼠一過去的狀態 */
+        a:hover {
+            color: lightpink;
+            background: lightblue (255, 209, 209);
+            text-decoration: underline;
+            /* 變形 */
+            transform: rotate(360deg);
+        }
+
+        /* :active 點下去時滑鼠未移開的狀態 */
+        a:active {
+            color: rgb(241, 255, 192);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">Google</a>
+
+</body>
+
+</html>
